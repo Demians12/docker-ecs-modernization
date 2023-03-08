@@ -18,3 +18,11 @@
 
 - `docker push ${DOCKER_HUB_ID}/docker-compose-ecs-backend:latest`
 - `docker push ${DOCKER_HUB_ID}/docker-compose-ecs-frontend:latest`
+
+## Run second step
+
+- `docker compose up -d`
+- load aplication `curl http://localhost:3000` 
+- insert record in database 
+- - `curl http://localhost:3000/add/2/name2` - `curl http://localhost:3000/add/3/name3` - `curl http://localhost:3000/add/4/name4`
+- `docker compose down`

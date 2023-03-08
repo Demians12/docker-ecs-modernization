@@ -26,3 +26,7 @@
 - insert record in database 
 - - `curl http://localhost:3000/add/2/name2` - `curl http://localhost:3000/add/3/name3` - `curl http://localhost:3000/add/4/name4`
 - `docker compose down`
+
+# Module 2
+## Migrate the app to ECS using docker compose
+

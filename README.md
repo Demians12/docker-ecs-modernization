@@ -8,10 +8,7 @@
 ## Running first step
 ### run in the root folder:
 - `docker compose build`
-- `docker images` to see the created images
-`REPOSITORY                          TAG       IMAGE ID       CREATED             SIZE
-docker-ecs-modernization-frontend   latest    127ad9daae74   About an hour ago   18MB
-docker-ecs-modernization-backend    latest    99039f8e96b5   About an hour ago   74MB` 
+- `docker images` to see the created images 
 
 
 ### Push images to Docker Hub

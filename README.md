@@ -30,3 +30,24 @@
 # Module 2
 ## Migrate the app to ECS using docker compose
 
+1. Creating a docker contexto for ecs
+1.1 list context (commonly default)
+`docker context ls`
+1.2 create context
+`docker context create ecs`
+2. create secrets on aws secrets manager
+2.2 create a file with your secrets (I know, we'll improve that)
+touch docker-pull-creds.json
+{
+   "username":"YOUR DOCKERHUB USERID",
+   "password":"YOUR DOCKERHUB TOKEN or PASSWORD"
+}
+2.3 create the secret no aws secret manager
+`aws secretsmanager create-secret --name mysecretpassword --secret-file /path/to/mysecretpassword.txt`
+
+3. Deploy to Amazon ECS
+`docker compose -f docker-compose.yaml -f docker-compose-migration.yaml up`
+
+Below is the infra architecture defining primitives and application structure
+![enter image description here](https://docker.awsworkshop.io/images/application-on-aws.png)
+

@@ -57,14 +57,14 @@ Here is the real modernization which cover aspects like deploying microservices,
 ## Deploying microservices to ECS
 clone the already available application to focus totally in the infrastructure. You can adapt it to use your own app.
 
-git clone https://github.com/aws-containers/ecsdemo-platform
-git clone https://github.com/aws-containers/ecsdemo-frontend
-git clone https://github.com/aws-containers/ecsdemo-nodejs
-git clone https://github.com/aws-containers/ecsdemo-crystal
+git clone https://github.com/aws-containers/ecsdemo-platform <br>
+git clone https://github.com/aws-containers/ecsdemo-frontend <br>
+git clone https://github.com/aws-containers/ecsdemo-nodejs <br>
+git clone https://github.com/aws-containers/ecsdemo-crystal <br>
 
 Here, we will maintain the infrastructure with this repo, but each service will be maintained in its own separate repo. This repo will be the base env for the microservices to deploy.
 That will be our new architecture:
-[enter image description here](https://ecsworkshop.com/images/mu-topology-vpc.png)
+![enter image description here](https://ecsworkshop.com/images/mu-topology-vpc.png)
 
 ### Build environments
 1. Ensure service linked roles exist for Load Balancers and ECS. If it not exists, the following command will create this.

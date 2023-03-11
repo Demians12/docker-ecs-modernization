@@ -67,7 +67,7 @@ That will be our new architecture:
 ![enter image description here](https://ecsworkshop.com/images/mu-topology-vpc.png)
 
 ### Build environments
-1. Ensure service linked roles exist for Load Balancers and ECS. If it not exists, the following command will create this.
+1. Ensure service linked roles exist for Load Balancers and ECS. If it not exists, the following command will create this. <br>
 `aws iam get-role --role-name "AWSServiceRoleForElasticLoadBalancing" || aws iam create-service-linked-role --aws-service-name "elasticloadbalancing.amazonaws.com"`
 
 `aws iam get-role --role-name "AWSServiceRoleForECS" || aws iam create-service-linked-role --aws-service-name "ecs.amazonaws.com"`
